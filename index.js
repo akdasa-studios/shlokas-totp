@@ -11,7 +11,7 @@ app.set('port', 8080);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors())
-const secret = process.env.SECRET
+const secret = process.env.TOTP_SECRET
 var inst = new otp({
     name: "shlokas",
     keySize: 64,
